@@ -13,6 +13,14 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalInput;
     public int dir;
 
+    private CameraZoom camZoom;
+
+    private void Start()
+    {
+        // find the camera zoom script
+        camZoom = GameObject.Find("Main Camera/Zoom").GetComponent<CameraZoom>();
+    }
+
     private void Awake()
     {
         // Grab references
@@ -23,11 +31,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // run
-        run();
+        // caution! camera is zooming! charactor do not move!
+        if (!camZoom.isZoomActive)
+        {
+            // run
+            run();
 
-        // Jump
-        Jump();
+            // Jump
+            Jump();
+        }
     }
 
     private void run()
