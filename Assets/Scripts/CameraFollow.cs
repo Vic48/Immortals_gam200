@@ -22,6 +22,7 @@ public class CameraFollow : MonoBehaviour
         // if zooming camera, do not control camera here la. Only one can control at one time!
         if (!camZoom.isZoomActive)
         {
+            Debug.Log(target.position);
             //Player position; 2d camera z pos stays -10
             Vector3 newPos = new Vector3(target.position.x, target.position.y + yoffset, -10f);
             //change current pos to target pos

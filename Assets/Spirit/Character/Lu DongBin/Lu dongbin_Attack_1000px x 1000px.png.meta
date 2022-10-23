@@ -124,10 +124,10 @@ TextureImporter:
       name: Lu dongbin_Attack_1000px x 1000px_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 3001
-        width: 582
-        height: 999
+        x: 0
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,10 +145,10 @@ TextureImporter:
       name: Lu dongbin_Attack_1000px x 1000px_1
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 3001
-        width: 569
-        height: 999
+        x: 1000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Lu dongbin_Attack_1000px x 1000px_2
       rect:
         serializedVersion: 2
-        x: 2368
-        y: 3001
-        width: 354
-        height: 999
+        x: 2000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +187,10 @@ TextureImporter:
       name: Lu dongbin_Attack_1000px x 1000px_3
       rect:
         serializedVersion: 2
-        x: 3706
-        y: 3715
-        width: 5
-        height: 4
+        x: 3000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +208,10 @@ TextureImporter:
       name: Lu dongbin_Attack_1000px x 1000px_4
       rect:
         serializedVersion: 2
-        x: 2355
-        y: 3650
-        width: 5
-        height: 5
+        x: 0
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +229,10 @@ TextureImporter:
       name: Lu dongbin_Attack_1000px x 1000px_5
       rect:
         serializedVersion: 2
-        x: 2997
-        y: 3001
-        width: 1003
-        height: 999
+        x: 1000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,90 +242,6 @@ TextureImporter:
       bones: []
       spriteID: 99e09eb5b7885ad40800000000000000
       internalID: 5595028175482064537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lu dongbin_Attack_1000px x 1000px_6
-      rect:
-        serializedVersion: 2
-        x: 705
-        y: 2714
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95818515c154b0ad0800000000000000
-      internalID: -2735016360771315623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lu dongbin_Attack_1000px x 1000px_7
-      rect:
-        serializedVersion: 2
-        x: 1706
-        y: 2714
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 538e0fbf1a2a5d770800000000000000
-      internalID: 8634986677153097781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lu dongbin_Attack_1000px x 1000px_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1999
-        width: 948
-        height: 999
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a98e297290c90d870800000000000000
-      internalID: 8705629642839746714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lu dongbin_Attack_1000px x 1000px_9
-      rect:
-        serializedVersion: 2
-        x: 997
-        y: 1999
-        width: 953
-        height: 999
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a9dc675b0058b0a0800000000000000
-      internalID: -6865649622284707415
       vertices: []
       indices: 
       edges: []

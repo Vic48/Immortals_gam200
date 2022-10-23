@@ -121,10 +121,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_0
       rect:
         serializedVersion: 2
-        x: 272
-        y: 3079
-        width: 520
-        height: 835
+        x: 0
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_1
       rect:
         serializedVersion: 2
-        x: 1235
-        y: 3081
-        width: 582
-        height: 818
+        x: 1000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_2
       rect:
         serializedVersion: 2
-        x: 2294
-        y: 3079
-        width: 580
-        height: 842
+        x: 2000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_3
       rect:
         serializedVersion: 2
-        x: 3305
-        y: 3083
-        width: 639
-        height: 865
+        x: 3000
+        y: 3000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_4
       rect:
         serializedVersion: 2
-        x: 278
-        y: 2077
-        width: 666
-        height: 839
+        x: 0
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_5
       rect:
         serializedVersion: 2
-        x: 1234
-        y: 2083
-        width: 691
-        height: 817
+        x: 1000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_6
       rect:
         serializedVersion: 2
-        x: 2294
-        y: 2077
-        width: 586
-        height: 844
+        x: 2000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: Lu dongbin_Walk_1000px x 1000px_7
       rect:
         serializedVersion: 2
-        x: 3305
-        y: 2081
-        width: 549
-        height: 868
+        x: 3000
+        y: 2000
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,27 +281,6 @@ TextureImporter:
       bones: []
       spriteID: e1e204ac0b7dc8870800000000000000
       internalID: 8686554935598263838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lu dongbin_Walk_1000px x 1000px_8
-      rect:
-        serializedVersion: 2
-        x: 1632
-        y: 2073
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff596acabe7ea33d0800000000000000
-      internalID: -3226011183657609729
       vertices: []
       indices: 
       edges: []
