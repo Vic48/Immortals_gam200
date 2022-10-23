@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: 44c0492872d0a3b4a9bf92934f1e7d45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6038663160207611108
+    second: Lu Dongbin_ Run_1000px x 1000px_0
+  - first:
+      213: -1419691846122206276
+    second: Lu Dongbin_ Run_1000px x 1000px_1
+  - first:
+      213: 6657824703886404891
+    second: Lu Dongbin_ Run_1000px x 1000px_2
+  - first:
+      213: 8814690912385867197
+    second: Lu Dongbin_ Run_1000px x 1000px_3
+  - first:
+      213: 5642270837701416806
+    second: Lu Dongbin_ Run_1000px x 1000px_4
+  - first:
+      213: -2300547428697316657
+    second: Lu Dongbin_ Run_1000px x 1000px_5
+  - first:
+      213: 1653154351877245593
+    second: Lu Dongbin_ Run_1000px x 1000px_6
+  - first:
+      213: -1201826406056833417
+    second: Lu Dongbin_ Run_1000px x 1000px_7
+  - first:
+      213: -7212254744641378558
+    second: Lu Dongbin_ Run_1000px x 1000px_8
+  - first:
+      213: 5929440932185000211
+    second: Lu Dongbin_ Run_1000px x 1000px_9
+  - first:
+      213: -3053461747911993190
+    second: Lu Dongbin_ Run_1000px x 1000px_10
+  - first:
+      213: -486659079358058478
+    second: Lu Dongbin_ Run_1000px x 1000px_11
+  - first:
+      213: 2186880615197785089
+    second: Lu Dongbin_ Run_1000px x 1000px_12
+  - first:
+      213: -6323710718955209646
+    second: Lu Dongbin_ Run_1000px x 1000px_13
+  - first:
+      213: 5195388666042649217
+    second: Lu Dongbin_ Run_1000px x 1000px_14
+  - first:
+      213: -5585340573205578788
+    second: Lu Dongbin_ Run_1000px x 1000px_15
+  - first:
+      213: 5046947265904670392
+    second: Lu Dongbin_ Run_1000px x 1000px_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 4049
+        width: 760
+        height: 759
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b669999db523ca0800000000000000
+      internalID: -6038663160207611108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_1
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 4049
+        width: 735
+        height: 762
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb0e5da9cd3c4ce0800000000000000
+      internalID: -1419691846122206276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_2
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 4047
+        width: 734
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d28f32b48556c50800000000000000
+      internalID: 6657824703886404891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_3
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 4047
+        width: 727
+        height: 744
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd9f9dbea2145a70800000000000000
+      internalID: 8814690912385867197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_4
+      rect:
+        serializedVersion: 2
+        x: 4098
+        y: 4049
+        width: 725
+        height: 754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6671dbfce6f5d4e40800000000000000
+      internalID: 5642270837701416806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 3043
+        width: 723
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2ee8b6d40d210e0800000000000000
+      internalID: -2300547428697316657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_6
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 3043
+        width: 713
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ac88ecf1f21f610800000000000000
+      internalID: 1653154351877245593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_7
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 3046
+        width: 833
+        height: 761
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e4c415041425fe0800000000000000
+      internalID: -1201826406056833417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_8
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 3342
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207660c958ce8eb90800000000000000
+      internalID: -7212254744641378558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_9
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3047
+        width: 732
+        height: 763
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3194c8fbc1b994250800000000000000
+      internalID: 5929440932185000211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_10
+      rect:
+        serializedVersion: 2
+        x: 3973
+        y: 3043
+        width: 850
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98567cd7bcef95d0800000000000000
+      internalID: -3053461747911993190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_11
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 3031
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210f420552a0f39f0800000000000000
+      internalID: -486659079358058478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_12
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 2047
+        width: 727
+        height: 745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c3d0b355c595e10800000000000000
+      internalID: 2186880615197785089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_13
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 2047
+        width: 725
+        height: 757
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c38560b9aad38a0800000000000000
+      internalID: -6323710718955209646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_14
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 2465
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a0095277ab91840800000000000000
+      internalID: 5195388666042649217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_15
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 2045
+        width: 723
+        height: 769
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb31805752ec72b0800000000000000
+      internalID: -5585340573205578788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu Dongbin_ Run_1000px x 1000px_16
+      rect:
+        serializedVersion: 2
+        x: 3102
+        y: 2045
+        width: 713
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b670686ccb5a0640800000000000000
+      internalID: 5046947265904670392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

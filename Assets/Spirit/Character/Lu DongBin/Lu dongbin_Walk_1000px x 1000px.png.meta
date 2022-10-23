@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: 7ad04eebd06306d46bdda6a0afe37fc0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6414390949500237768
+    second: Lu dongbin_Walk_1000px x 1000px_0
+  - first:
+      213: -3137660325464308652
+    second: Lu dongbin_Walk_1000px x 1000px_1
+  - first:
+      213: 5522371134625638782
+    second: Lu dongbin_Walk_1000px x 1000px_2
+  - first:
+      213: 1699698776184605023
+    second: Lu dongbin_Walk_1000px x 1000px_3
+  - first:
+      213: -479087756158817859
+    second: Lu dongbin_Walk_1000px x 1000px_4
+  - first:
+      213: -7328596065916791169
+    second: Lu dongbin_Walk_1000px x 1000px_5
+  - first:
+      213: -693301234777666031
+    second: Lu dongbin_Walk_1000px x 1000px_6
+  - first:
+      213: 8686554935598263838
+    second: Lu dongbin_Walk_1000px x 1000px_7
+  - first:
+      213: -3226011183657609729
+    second: Lu dongbin_Walk_1000px x 1000px_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_0
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 3079
+        width: 520
+        height: 835
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7317b659e740950800000000000000
+      internalID: 6414390949500237768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_1
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 3081
+        width: 582
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4540ddade8ac474d0800000000000000
+      internalID: -3137660325464308652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_2
+      rect:
+        serializedVersion: 2
+        x: 2294
+        y: 3079
+        width: 580
+        height: 842
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e796b35c94763ac40800000000000000
+      internalID: 5522371134625638782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_3
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 3083
+        width: 639
+        height: 865
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5946a3180b869710800000000000000
+      internalID: 1699698776184605023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_4
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 2077
+        width: 666
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db92aed5930f959f0800000000000000
+      internalID: -479087756158817859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_5
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 2083
+        width: 691
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7654b4e4b89b4a90800000000000000
+      internalID: -7328596065916791169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_6
+      rect:
+        serializedVersion: 2
+        x: 2294
+        y: 2077
+        width: 586
+        height: 844
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11eccb24336e066f0800000000000000
+      internalID: -693301234777666031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_7
+      rect:
+        serializedVersion: 2
+        x: 3305
+        y: 2081
+        width: 549
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e204ac0b7dc8870800000000000000
+      internalID: 8686554935598263838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lu dongbin_Walk_1000px x 1000px_8
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 2073
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff596acabe7ea33d0800000000000000
+      internalID: -3226011183657609729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
