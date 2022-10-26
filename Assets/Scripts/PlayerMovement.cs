@@ -59,9 +59,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         playerBody.velocity = new Vector2((horizontalInput) * runSpeed, playerBody.velocity.y);
-        // Debug.Log(transform.position);
-        // transform.position = new Vector3(transform.position.x + horizontalInput*runSpeed, transform.position.y, transform.position.z);
-        // Debug.Log(transform.position);
         // set animation parameter, Run = has horizontalInput or not
         // If has horizontal input, Run = true else false
         anim.SetBool("Run", horizontalInput != 0);
