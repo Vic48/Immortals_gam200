@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 34abf207ae7932448a81c32df232fcdf
+guid: 7707b1d9048c1d04381f613f4856898c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3170178069754470097
-    second: Lu dongbin_Idle_1000px x 1000px (1)_0
+      213: 3333655676273004292
+    second: Lu dongbin_Idle_1000px x 1000px_0
   - first:
-      213: -1557060933026912055
-    second: Lu dongbin_Idle_1000px x 1000px (1)_1
+      213: -7524259233878705748
+    second: Lu dongbin_Idle_1000px x 1000px_1
   - first:
-      213: -14444986497466924
-    second: Lu dongbin_Idle_1000px x 1000px (1)_2
+      213: -4591677415916642614
+    second: Lu dongbin_Idle_1000px x 1000px_2
   - first:
-      213: -6063613211424634241
-    second: Lu dongbin_Idle_1000px x 1000px (1)_3
+      213: -2513245274219950805
+    second: Lu dongbin_Idle_1000px x 1000px_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lu dongbin_Idle_1000px x 1000px (1)_0
+      name: Lu dongbin_Idle_1000px x 1000px_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +117,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f212d8587d34104d0800000000000000
-      internalID: -3170178069754470097
+      spriteID: 40f87b3dc26834e20800000000000000
+      internalID: 3333655676273004292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lu dongbin_Idle_1000px x 1000px (1)_1
+      name: Lu dongbin_Idle_1000px x 1000px_1
       rect:
         serializedVersion: 2
         x: 1000
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c8ea41c455346ae0800000000000000
-      internalID: -1557060933026912055
+      spriteID: ca9f4be8716749790800000000000000
+      internalID: -7524259233878705748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lu dongbin_Idle_1000px x 1000px (1)_2
+      name: Lu dongbin_Idle_1000px x 1000px_2
       rect:
         serializedVersion: 2
         x: 2000
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dd780f7c5eaccff0800000000000000
-      internalID: -14444986497466924
+      spriteID: aceda1dc7b51740c0800000000000000
+      internalID: -4591677415916642614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lu dongbin_Idle_1000px x 1000px (1)_3
+      name: Lu dongbin_Idle_1000px x 1000px_3
       rect:
         serializedVersion: 2
         x: 3000
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7a4bad19e7b9dba0800000000000000
-      internalID: -6063613211424634241
+      spriteID: b2dc0b42db82f1dd0800000000000000
+      internalID: -2513245274219950805
       vertices: []
       indices: 
       edges: []

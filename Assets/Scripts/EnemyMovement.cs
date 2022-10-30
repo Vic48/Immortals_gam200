@@ -14,7 +14,6 @@ public class EnemyMovement : MonoBehaviour
     public Player player;
     public Collider2D bodyCollider;
     public GameObject bullet;
-    private Animator anim;
 
     public float shootRate = 10f;
     float nextAttackTime = 0f;
@@ -34,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         mustPatrol = true;
+
     }
 
     void Update()
@@ -52,7 +52,6 @@ public class EnemyMovement : MonoBehaviour
                 || player.position.x < transform.position.x && transform.localScale.x > 0)
             {
                 Flip();
-                anim.SetBool("Walking", true);
             }
             //No shooting when patrolling 
             mustPatrol = false;
