@@ -10,7 +10,9 @@ public class EnemyMovement : MonoBehaviour
     public Rigidbody2D enemyBody;
     public Transform groundCheck;
     public LayerMask groundPosLayer;
-    public Transform player, shootPos;
+    public Transform shootPos;
+    public Player player;
+    public Collider2D bodyCollider;
     public GameObject bullet;
 
     public float shootRate = 10f;
@@ -82,7 +84,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (mustTurn)
+        if (mustTurn || bodyCollider.IsTouchingLayers(groundPosLayer))
         {
             Flip();
         }

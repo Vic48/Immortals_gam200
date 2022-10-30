@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     public Sprite HeXianguIcon;
 
+    public Vector2 position;
+
     public int maxHealth = 100;
     public int currentHealth;
 
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        this.position = gameObject.transform.position;
     }
 
     private void Update()

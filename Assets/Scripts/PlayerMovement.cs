@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Player player;
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpHight;
     [SerializeField] private LayerMask groundLayer;
@@ -39,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
             // Jump
             Jump();
+
+            // after run, jump tell parent Player where am I
+            UpdatePlayerPosition();
         }
     }
 
@@ -49,12 +53,21 @@ public class PlayerMovement : MonoBehaviour
         // Flip player when moving left-right
         if (horizontalInput > 0.01f)
         {
+            // flip player
             GetComponent<SpriteRenderer>().flipX = false;
+            // flip attack range
+            Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
+            attackPosition.x = 0.9f;
+            gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
             dir = 1;
         }
         else if (horizontalInput < -0.01f)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+            // flip attack range
+            Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
+            attackPosition.x = -0.9f;
+            gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
             dir = -1;
         }
 
@@ -95,5 +108,10 @@ public class PlayerMovement : MonoBehaviour
     {
         //Character can only attack when not moving or jumping
         return horizontalInput == 0 && isGrounded();
+    }
+
+    private void UpdatePlayerPosition() 
+    {
+        player.position = gameObject.transform.position;
     }
 }
