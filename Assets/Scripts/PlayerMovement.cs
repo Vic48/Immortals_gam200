@@ -79,10 +79,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKey(KeyCode.W) && isGrounded())
+        if (Input.GetKey(KeyCode.Space) && isGrounded())
         {
             playerBody.velocity = new Vector2(playerBody.velocity.x, jumpHight);
-            anim.SetTrigger("Jump");
+            anim.SetTrigger("IsJumping");
         }
 
         // set animation parameter, Grounded = grounded
