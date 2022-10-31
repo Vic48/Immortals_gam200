@@ -64,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
     void normalAttack()
     {
         //play an attack animation
-        anim.SetTrigger("NormalAttack");
+        anim.SetTrigger("EnemyAttck");
         //Detect enemy in the range attack 
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(
             attackPoint.position,
