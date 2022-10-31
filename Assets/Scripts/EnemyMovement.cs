@@ -7,33 +7,24 @@ public class EnemyMovement : MonoBehaviour
     [HideInInspector] public bool mustPatrol;
     [HideInInspector] public bool mustTurn;
 
+    public Collider2D bodyCollider;
+    public Animator anim;
     public Rigidbody2D enemyBody;
     public Transform groundCheck;
     public LayerMask groundPosLayer;
-    public Transform shootPos;
     public Player player;
-    public Collider2D bodyCollider;
-    public GameObject bullet;
-
-    public float shootRate = 10f;
-    float nextAttackTime = 0f;
-    private float timePass = 0f;
-
-    public float walkSpeed, range, timeBTWShots, shootSpeed;
+    public float walkSpeed, range;
     private float distToPlayer;
-    void Shoot(int dir)
-    {
-        //yield return new WaitForSeconds(timeBTWShots);
-        GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
-        newBullet.GetComponent<Bullet>().isenemy = true;
-        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(newBullet.GetComponent<Bullet>().speed * dir * Time.fixedDeltaTime, 0);
+    public Transform attackPoint;
 
-    }
+    public float attackRange = 0.5f;
+    public int attackDamage = 20;
+    public float attackRate = 2f;
+    private float nextAttackTime = 0f;
 
     void Start()
     {
         mustPatrol = true;
-
     }
 
     void Update()
@@ -53,33 +44,37 @@ public class EnemyMovement : MonoBehaviour
             {
                 Flip();
             }
-            //No shooting when patrolling 
-            mustPatrol = false;
-            enemyBody.velocity = Vector2.zero;
-            if (timePass <= 0)
-            {
-                if ((player.position.x - transform.position.x) > 0)
-                {
-                    Shoot(1);
-                }
-                else
-                {
-                    Shoot(-1);
-                }
-                timePass = shootRate;
-            }
-            else
-            {
-                timePass -= Time.fixedDeltaTime;
-            }
-
-
         }
         else
         {
             mustPatrol = true;
         }
 
+        if (Time.time > nextAttackTime)
+        {
+            //normal attck
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                normalAttack();
+                //0.5 second cool down time
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
+        }
+    }
+    void normalAttack()
+    {
+        //play an attack animation
+        anim.SetTrigger("NormalAttack");
+        //Detect enemy in the range attack 
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            attackRange
+        );
+        //Due Damage
+        foreach (Collider2D player in hitPlayer)
+        {
+            player.GetComponent<Player>().TakeDamage(attackDamage);
+        }
     }
 
     private void FixedUpdate()
@@ -105,5 +100,15 @@ public class EnemyMovement : MonoBehaviour
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         walkSpeed *= -1;
         mustPatrol = true;
+    }
+
+    //draw stuff in editor to check attack range
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

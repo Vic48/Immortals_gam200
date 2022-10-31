@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
             // Do not change position after die
             this.gameObject.transform.position = deadPosition;
         }
+
     }
 
     public void TakeDamage(int damage)
