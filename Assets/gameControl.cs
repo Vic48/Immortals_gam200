@@ -38,7 +38,6 @@ public class gameControl : MonoBehaviour
     private void Start()
     {
         // start with Lv Donbin
-        this.player.AddComponent(typeof(LvDongbin));
         this.currentPlayer = playerName.LvDongbin;
         // initial both player HP
         this.playerHP = new Dictionary<playerName, int>();
@@ -86,8 +85,6 @@ public class gameControl : MonoBehaviour
     {
         if (name == playerName.LvDongbin)
         {
-            Destroy(this.player.GetComponent<HeXiangu>());
-            this.player.AddComponent(typeof(LvDongbin));
             this.playerScript.SetHealth(playerHP[playerName.LvDongbin]);
             this.playerScript.SetAvatar(playerName.LvDongbin);
             // update Lv Dongbin position
@@ -99,8 +96,6 @@ public class gameControl : MonoBehaviour
         }
         else 
         {
-            Destroy(this.player.GetComponent<LvDongbin>());
-            this.player.AddComponent(typeof(HeXiangu));
             this.playerScript.SetHealth(playerHP[playerName.HeXiangu]);
             this.playerScript.SetAvatar(playerName.HeXiangu);
             // update He Xiangu position

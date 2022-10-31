@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [HideInInspector] public bool mustPatrol;
-    [HideInInspector] public bool mustTurn;
+    [HideInInspector] public bool mustTurn = false;
 
     public Collider2D bodyCollider;
     public Animator anim;
@@ -38,27 +38,24 @@ public class EnemyMovement : MonoBehaviour
 
         if (distToPlayer <= range)
         {
+            mustPatrol = false;
             // Face the player
             if (player.position.x > transform.position.x && transform.localScale.x < 0
                 || player.position.x < transform.position.x && transform.localScale.x > 0)
             {
-                Flip();
+                Flip(false);
             }
-        }
-        else
-        {
-            mustPatrol = true;
-        }
 
-        if (Time.time > nextAttackTime)
-        {
-            //normal attck
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Time.time > nextAttackTime)
             {
                 normalAttack();
                 //0.5 second cool down time
                 nextAttackTime = Time.time + 1f / attackRate;
             }
+        }
+        else
+        {
+            mustPatrol = true;
         }
     }
     void normalAttack()
@@ -73,19 +70,24 @@ public class EnemyMovement : MonoBehaviour
         //Due Damage
         foreach (Collider2D player in hitPlayer)
         {
-            player.GetComponent<Player>().TakeDamage(attackDamage);
+            if (player.name == gameControl.playerName.LvDongbin.ToString() || player.name == gameControl.playerName.LvDongbin.ToString()) 
+            {
+                player.transform.parent.GetComponent<Player>().TakeDamage(attackDamage);
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (mustTurn || bodyCollider.IsTouchingLayers(groundPosLayer))
+        // should turn or hit the wall, turn around
+        if (mustPatrol && (mustTurn || bodyCollider.IsTouchingLayers(groundPosLayer)))
         {
-            Flip();
+            Flip(true);
         }
         //if must Patrol is true
         if (mustPatrol)
         {
+            // if on the ground do not turn
             mustTurn = !Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundPosLayer);
         }
     }
@@ -94,12 +96,12 @@ public class EnemyMovement : MonoBehaviour
     {
         enemyBody.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, enemyBody.velocity.y);
     }
-    void Flip()
+    void Flip(bool isPatrol)
     {
         mustPatrol = false;
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         walkSpeed *= -1;
-        mustPatrol = true;
+        mustPatrol = isPatrol;
     }
 
     //draw stuff in editor to check attack range

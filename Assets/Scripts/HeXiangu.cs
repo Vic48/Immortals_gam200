@@ -7,6 +7,7 @@ public class HeXiangu : MonoBehaviour
     public Vector2 direction;
     public float LaunchForce;
     public GameObject Arrow;
+    public PlayerMovement playerMovement;
 
     private void Update()
     {
@@ -30,7 +31,7 @@ public class HeXiangu : MonoBehaviour
         GameObject newArrow = Instantiate(Arrow, transform.position, transform.rotation);
         //Apply force on arrow just created 
         //force to arrow is on x-axis
-        newArrow.GetComponent<Rigidbody2D>().AddForce(transform.right * LaunchForce);
+        newArrow.GetComponent<Rigidbody2D>().AddForce(transform.right * playerMovement.dir * LaunchForce);
 
     }
 

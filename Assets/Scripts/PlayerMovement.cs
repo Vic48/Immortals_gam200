@@ -53,28 +53,80 @@ public class PlayerMovement : MonoBehaviour
         // Flip player when moving left-right
         if (horizontalInput > 0.01f)
         {
-            // flip player
-            GetComponent<SpriteRenderer>().flipX = false;
-            // flip attack range
-            Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
-            attackPosition.x = 0.9f;
-            gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
-            dir = 1;
+            flipPlayer(1);
         }
         else if (horizontalInput < -0.01f)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
-            // flip attack range
-            Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
-            attackPosition.x = -0.9f;
-            gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
-            dir = -1;
+            flipPlayer(-1);
         }
 
         playerBody.velocity = new Vector2((horizontalInput) * runSpeed, playerBody.velocity.y);
         // set animation parameter, Run = has horizontalInput or not
         // If has horizontal input, Run = true else false
-        anim.SetBool("Run", horizontalInput != 0);
+        // If in the air do play play run animation!
+        anim.SetBool("Run", horizontalInput != 0 && isGrounded());
+    }
+
+    // flip player
+    private void flipPlayer(int direction) 
+    {
+        if (dir == 1) 
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+            if (gameObject.name == gameControl.playerName.LvDongbin.ToString())
+            {
+                // flip attack range
+                Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
+                attackPosition.x = 0.9f;
+                gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
+            }
+            // TODO: If arrow and bow combine, change here
+            else
+            {
+                // flip bow
+                Transform bow = gameObject.transform.GetChild(0);
+                bow.GetComponent<SpriteRenderer>().flipX = false;
+                Vector3 bowPosition = bow.localPosition;
+                bowPosition.x = 0.6f;
+                bow.transform.localPosition = bowPosition;
+
+                // flip arrow
+                Transform arrow = gameObject.transform.GetChild(1);
+                arrow.GetComponent<SpriteRenderer>().flipX = false;
+                Vector3 arrowPosition = arrow.localPosition;
+                arrowPosition.x = 1.15f;
+                arrow.transform.localPosition = arrowPosition;
+            }
+        }
+        if (dir == -1)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+            if (gameObject.name == gameControl.playerName.LvDongbin.ToString())
+            {
+                // flip attack range
+                Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
+                attackPosition.x = -0.9f;
+                gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
+            }
+            // TODO: If arrow and bow combine, change here
+            else
+            {
+                // flip bow
+                Transform bow = gameObject.transform.GetChild(0);
+                bow.GetComponent<SpriteRenderer>().flipX = true;
+                Vector3 bowPosition = bow.localPosition;
+                bowPosition.x = -0.6f;
+                bow.transform.localPosition = bowPosition;
+
+                // flip arrow
+                Transform arrow = gameObject.transform.GetChild(1);
+                arrow.GetComponent<SpriteRenderer>().flipX = true;
+                Vector3 arrowPosition = arrow.localPosition;
+                arrowPosition.x = -1.15f;
+                arrow.transform.localPosition = arrowPosition;
+            }
+        }
+        dir = direction;
     }
 
     private void Jump()
@@ -82,7 +134,9 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
             playerBody.velocity = new Vector2(playerBody.velocity.x, jumpHight);
-            anim.SetTrigger("Jump");
+            anim.SetBool("Jump", true);
+            // jump la, dont run!
+            anim.SetBool("Run", false);
         }
 
         // set animation parameter, Grounded = grounded
