@@ -827,7 +827,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2bb9e6b9f7b399b4faa1b9be857fcf1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -847,8 +847,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100007763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8764, y: 3.8453588, z: 0}
-  m_LocalScale: {x: 1.2891958, y: 1, z: 1}
+  m_LocalPosition: {x: -5.119, y: 4.9315, z: 0}
+  m_LocalScale: {x: 1.2497463, y: 0.8994, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1711,7 +1711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &204278163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1960,8 +1960,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207516681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.25, y: -27.04, z: 0}
-  m_LocalScale: {x: 2.6745694, y: 2.6745694, z: 2.6745694}
+  m_LocalPosition: {x: -4.2004, y: -27.04, z: 0}
+  m_LocalScale: {x: 2.3829834, y: 2.6745694, z: 2.6745694}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 90
@@ -12540,8 +12540,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 632659809
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 269315e73bbeed041b4d6eb1da1f900f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12562,8 +12562,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113568339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.34, y: -17.28, z: 0}
-  m_LocalScale: {x: 3.4000762, y: 1.5958716, z: 1}
+  m_LocalPosition: {x: 36.34, y: -9.5548, z: 0}
+  m_LocalScale: {x: 3.4000762, y: 1.7548691, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -15984,7 +15984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1458171247
 Transform:
   m_ObjectHideFlags: 0
