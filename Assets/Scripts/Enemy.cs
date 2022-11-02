@@ -18,6 +18,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     public float deadBodyDestroyTime;
 
+    //attack related
+    public float attackRange = 0.5f;
+    public int attackDamage = 20;
+    public float attackRate = 2f;
+    private float nextAttackTime = 0f;
+    public Transform attackPoint;
     void Start()
     {
         currentHealth = maxHealth;
@@ -30,6 +36,12 @@ public class Enemy : MonoBehaviour
         {
             // Do not change position after die
             this.gameObject.transform.position = deadPosition;
+        }
+        if (Time.time > nextAttackTime)
+        {
+            normalAttack();
+            //0.5 second cool down time
+            nextAttackTime = Time.time + 1f / attackRate;
         }
 
     }
@@ -73,5 +85,34 @@ public class Enemy : MonoBehaviour
         this.gameObject.SetActive(false);
         this.enabled = false;
         Destroy(this);
+    }
+    void normalAttack()
+    {
+        //play an attack animation
+        anim.SetTrigger("Attack");
+        //Detect enemy in the range attack 
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(
+            attackPoint.position,
+            attackRange
+        );
+        //Due Damage
+        foreach (Collider2D player in hitPlayer)
+        {
+            if (player.name == gameControl.playerName.LvDongbin.ToString() || player.name == gameControl.playerName.LvDongbin.ToString())
+            {
+                player.transform.parent.GetComponent<Player>().TakeDamage(attackDamage);
+            }
+        }
+    }
+
+
+    //draw stuff in editor to check attack range
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

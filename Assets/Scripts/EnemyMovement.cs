@@ -15,12 +15,6 @@ public class EnemyMovement : MonoBehaviour
     public Player player;
     public float walkSpeed, range;
     private float distToPlayer;
-    public Transform attackPoint;
-
-    public float attackRange = 0.5f;
-    public int attackDamage = 20;
-    public float attackRate = 2f;
-    private float nextAttackTime = 0f;
 
     void Start()
     {
@@ -45,35 +39,10 @@ public class EnemyMovement : MonoBehaviour
             {
                 Flip(false);
             }
-
-            if (Time.time > nextAttackTime)
-            {
-                normalAttack();
-                //0.5 second cool down time
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
         }
         else
         {
             mustPatrol = true;
-        }
-    }
-    void normalAttack()
-    {
-        //play an attack animation
-        anim.SetTrigger("EnemyAttck");
-        //Detect enemy in the range attack 
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(
-            attackPoint.position,
-            attackRange
-        );
-        //Due Damage
-        foreach (Collider2D player in hitPlayer)
-        {
-            if (player.name == gameControl.playerName.LvDongbin.ToString() || player.name == gameControl.playerName.LvDongbin.ToString()) 
-            {
-                player.transform.parent.GetComponent<Player>().TakeDamage(attackDamage);
-            }
         }
     }
 
@@ -103,14 +72,5 @@ public class EnemyMovement : MonoBehaviour
         walkSpeed *= -1;
         mustPatrol = isPatrol;
     }
-
-    //draw stuff in editor to check attack range
-    private void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-        {
-            return;
-        }
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
 }
+
