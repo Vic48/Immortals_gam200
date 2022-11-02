@@ -37,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
             if (player.position.x > transform.position.x && transform.localScale.x < 0
                 || player.position.x < transform.position.x && transform.localScale.x > 0)
             {
-                Flip(false);
+                Flip();
             }
         }
         else
@@ -51,7 +51,10 @@ public class EnemyMovement : MonoBehaviour
         // should turn or hit the wall, turn around
         if (mustPatrol && (mustTurn || bodyCollider.IsTouchingLayers(groundPosLayer)))
         {
-            Flip(true);
+            // before flip, disable patrol
+            mustPatrol = false;
+            Flip();
+            mustPatrol = true;
         }
         //if must Patrol is true
         if (mustPatrol)
@@ -65,12 +68,10 @@ public class EnemyMovement : MonoBehaviour
     {
         enemyBody.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, enemyBody.velocity.y);
     }
-    void Flip(bool isPatrol)
+    void Flip()
     {
-        mustPatrol = false;
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         walkSpeed *= -1;
-        mustPatrol = isPatrol;
     }
 }
 

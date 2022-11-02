@@ -24,6 +24,10 @@ public class Enemy : MonoBehaviour
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
     public Transform attackPoint;
+
+    // movement related
+    public EnemyMovement enemyMovement;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -37,13 +41,12 @@ public class Enemy : MonoBehaviour
             // Do not change position after die
             this.gameObject.transform.position = deadPosition;
         }
-        if (Time.time > nextAttackTime)
+        else if (Time.time > nextAttackTime && !enemyMovement.mustPatrol)
         {
             normalAttack();
-            //0.5 second cool down time
+            // 0.5 second cool down time
             nextAttackTime = Time.time + 1f / attackRate;
         }
-
     }
 
     public void TakeDamage(int damage)
