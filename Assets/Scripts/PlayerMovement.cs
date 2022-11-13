@@ -80,23 +80,6 @@ public class PlayerMovement : MonoBehaviour
                 attackPosition.x = 0.9f;
                 gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
             }
-            // TODO: If arrow and bow combine, change here
-            else
-            {
-                // flip bow
-                Transform bow = gameObject.transform.GetChild(0);
-                bow.GetComponent<SpriteRenderer>().flipX = false;
-                Vector3 bowPosition = bow.localPosition;
-                bowPosition.x = 0.6f;
-                bow.transform.localPosition = bowPosition;
-
-                // flip arrow
-                Transform arrow = gameObject.transform.GetChild(1);
-                arrow.GetComponent<SpriteRenderer>().flipX = false;
-                Vector3 arrowPosition = arrow.localPosition;
-                arrowPosition.x = 1.15f;
-                arrow.transform.localPosition = arrowPosition;
-            }
         }
         if (dir == -1)
         {
@@ -107,23 +90,6 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
                 attackPosition.x = -0.9f;
                 gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
-            }
-            // TODO: If arrow and bow combine, change here
-            else
-            {
-                // flip bow
-                Transform bow = gameObject.transform.GetChild(0);
-                bow.GetComponent<SpriteRenderer>().flipX = true;
-                Vector3 bowPosition = bow.localPosition;
-                bowPosition.x = -0.6f;
-                bow.transform.localPosition = bowPosition;
-
-                // flip arrow
-                Transform arrow = gameObject.transform.GetChild(1);
-                arrow.GetComponent<SpriteRenderer>().flipX = true;
-                Vector3 arrowPosition = arrow.localPosition;
-                arrowPosition.x = -1.15f;
-                arrow.transform.localPosition = arrowPosition;
             }
         }
         dir = direction;
