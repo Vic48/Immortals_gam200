@@ -24,6 +24,14 @@ public class HeXiangu : MonoBehaviour
             Shoot();
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coins"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
     void Shoot()
     {
         // instantiate the arrow at the exact simple disposition and rotation
