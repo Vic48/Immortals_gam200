@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class Bow : MonoBehaviour
 {
+    [SerializeField] private HeXiangu hXG;
     public GameObject arrow;
     public float launchForce;
     public Transform shotPoint;
@@ -17,6 +18,9 @@ public class Bow : MonoBehaviour
     public int numberOfPoints;
     public float spaceBetweenPoints;
     Vector2 direction;
+    public bool isFlip;
+
+    public Vector2 position;
 
     private void Start()
     {
@@ -38,7 +42,14 @@ public class Bow : MonoBehaviour
         //direction bet A and B
         Vector2 Direction = mousePosition - bowPosition;
 
-        transform.right = Direction;
+        isFlip = hXG.GetComponent<SpriteRenderer>().flipX;
+
+        //Make right pos as the direction
+        if ((Direction.x >= 0 && isFlip == false) || (Direction.x <= 0 && isFlip == true))
+        {
+            Debug.Log(Direction.x);
+            transform.right = Direction;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {

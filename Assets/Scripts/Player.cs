@@ -18,6 +18,12 @@ public class Player : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    // dead related
+    public bool isDead = false;
+    Vector3 deadPosition;
+    [SerializeField]
+    public float deadBodyDestroyTime;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -57,4 +63,29 @@ public class Player : MonoBehaviour
             healthBarAvatar.sprite = HeXianguIcon;
         }
     }
+    //void Die()
+    //{
+    //    this.isDead = true;
+
+    //    //die animation
+    //    anim.SetBool("IsDead", true);
+
+    //    //Disable the enemy collision
+    //    GetComponent<Collider2D>().enabled = false;
+
+    //    // record dead position
+    //    this.deadPosition = this.gameObject.transform.position;
+
+
+    //    // Destry dead body
+    //    StartCoroutine(playerDieDestory());
+    //}
+    //IEnumerator playerDieDestory()
+    //{
+    //    yield return new WaitForSeconds(deadBodyDestroyTime);
+    //    // Destroy enemy dead body after 3s
+    //    this.gameObject.SetActive(false);
+    //    this.enabled = false;
+    //    Destroy(this);
+    //}
 }

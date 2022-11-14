@@ -358,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11381852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.954, y: -0.323, z: 0}
+  m_LocalPosition: {x: 0.97, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1020178267}
@@ -2310,7 +2310,7 @@ SpriteRenderer:
   m_SortingLayerID: -1713097951
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 6414390949500237768, guid: 7ad04eebd06306d46bdda6a0afe37fc0, type: 3}
+  m_Sprite: {fileID: -7524259233878705748, guid: 7707b1d9048c1d04381f613f4856898c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3420,6 +3420,8 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   maxHealth: 100
   currentHealth: 0
+  isDead: 0
+  deadBodyDestroyTime: 0
 --- !u!1 &325242299
 GameObject:
   m_ObjectHideFlags: 0
@@ -9248,7 +9250,7 @@ GameObject:
   - component: {fileID: 1020178267}
   - component: {fileID: 1020178268}
   m_Layer: 0
-  m_Name: Bow
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9262,7 +9264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020178266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.27, y: 0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1061614058}
@@ -9282,12 +9284,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ae6eade95b0d6428dade40124faadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hXG: {fileID: 1458171254}
   arrow: {fileID: 5908261939433110228, guid: a8d9058530dbd7643959ed2457ae7631, type: 3}
   launchForce: 14
   shotPoint: {fileID: 11381853}
   point: {fileID: 7629010457154091566, guid: 7e5939712ee27514783acc182f19ebe4, type: 3}
   numberOfPoints: 50
   spaceBetweenPoints: 0.02
+  isFlip: 0
+  position: {x: 0, y: 0}
 --- !u!1 &1030016891
 GameObject:
   m_ObjectHideFlags: 0
@@ -9704,7 +9709,7 @@ GameObject:
   - component: {fileID: 1061614060}
   - component: {fileID: 1061614059}
   m_Layer: 0
-  m_Name: Bow_actual
+  m_Name: Arrow_actual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9717,13 +9722,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061614057}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6000004, y: -0.19999999, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.07863328, w: 0.9969036}
+  m_LocalPosition: {x: 0.52, y: -0.02, z: 0}
   m_LocalScale: {x: 0.19476262, y: 0.19476262, z: 0}
   m_Children: []
   m_Father: {fileID: 1020178267}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.02}
 --- !u!61 &1061614059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9790,7 +9795,7 @@ SpriteRenderer:
   m_SortingLayerID: -1713097951
   m_SortingLayer: 3
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 1b994e83cf20fbb4ead80555535f3c50, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 637189f5968421b469d84959b436500a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -70280,7 +70285,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.3333333, y: 3.3333333}
+    oldSize: {x: 3.030303, y: 3.030303}
     newSize: {x: 3.6, y: 6.68}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -70329,7 +70334,7 @@ SpriteRenderer:
   m_SortingLayerID: -1713097951
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: -902584946761408576, guid: dc9604326bfda37409a08c712d3c1b1b, type: 3}
+  m_Sprite: {fileID: 4419053542299079084, guid: d76601e5a87dd694093b9d83fffeeb9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -70353,7 +70358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  LaunchForce: 1500
+  LaunchForce: 0
   playerMovement: {fileID: 1458171249}
 --- !u!1 &1462625649
 GameObject:
