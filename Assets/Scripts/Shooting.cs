@@ -46,7 +46,7 @@ public class Shooting : MonoBehaviour
         //Make right pos as the direction
         if ((Direction.x >= 0 && isFlip == false) || (Direction.x <= 0 && isFlip == true))
         {
-            Debug.Log(Direction.x);
+            //Debug.Log(Direction.x);
             transform.right = Direction;
         }
 

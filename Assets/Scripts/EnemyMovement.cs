@@ -29,8 +29,10 @@ public class EnemyMovement : MonoBehaviour
         }
         //cal dist between enemy and player
         distToPlayer = Vector2.Distance(transform.position, player.position);
+        bool isDead = gameControl.Instance.getIsPlayerDead();
 
-        if (distToPlayer <= range)
+        // in the range and player not dead
+        if (distToPlayer <= range && !isDead)
         {
             mustPatrol = false;
             // Face the player

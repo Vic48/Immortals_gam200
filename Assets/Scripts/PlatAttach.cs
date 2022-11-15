@@ -31,8 +31,8 @@ public class PlatAttach : MonoBehaviour
     private void Update()
     {
         if (
-            triggerBox.IsTouching(LvDongbin.GetComponent<Collider2D>()) ||
-            triggerBox.IsTouching(HeXiangu.GetComponent<Collider2D>())
+            (LvDongbin != null && triggerBox.IsTouching(LvDongbin.GetComponent<Collider2D>())) ||
+            (HeXiangu != null && triggerBox.IsTouching(HeXiangu.GetComponent<Collider2D>()))
         ) 
         {
             Vector3 currentPosition = platform.transform.localPosition;

@@ -32,8 +32,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        bool isPlayerDead = gameControl.Instance.getIsPlayerDead();
         // caution! camera is zooming! charactor do not move!
-        if (!camZoom.isZoomActive)
+        if (!camZoom.isZoomActive && !isPlayerDead)
         {
             // run
             run();

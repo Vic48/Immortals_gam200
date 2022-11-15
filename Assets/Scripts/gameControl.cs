@@ -9,6 +9,10 @@ public class gameControl : MonoBehaviour
     public GameObject LvDongbin;
     public GameObject HeXiangu;
     public Player playerScript;
+
+    // dead related
+    public bool isHeDead = false;
+    public bool isLvDead = false;
     public enum playerName
     {
         LvDongbin,
@@ -79,31 +83,69 @@ public class gameControl : MonoBehaviour
                 this.swithPlayer(playerName.LvDongbin);
             }
         }
+
+        // check if HP <= 0
+        if (this.playerScript.currentHealth <= 0) 
+        {
+            if (this.currentPlayer == playerName.LvDongbin)
+            {
+                this.isLvDead = true;
+            }
+            else
+            {
+                this.isHeDead = true;
+            }
+            this.playerScript.Die(this.currentPlayer);
+        }
+
+        // both dead
+        if (isLvDead && isHeDead) 
+        {
+            // game over
+        }
     }
 
-    private void swithPlayer(playerName name) 
+    public void swithPlayer(playerName name) 
     {
-        if (name == playerName.LvDongbin)
+        if (name == playerName.LvDongbin && !isLvDead)
         {
             this.playerScript.SetHealth(playerHP[playerName.LvDongbin]);
             this.playerScript.SetAvatar(playerName.LvDongbin);
             // update Lv Dongbin position
-            this.LvDongbin.transform.localPosition = this.HeXiangu.transform.localPosition;
+            if (this.HeXiangu != null)
+            {
+                this.LvDongbin.transform.localPosition = this.HeXiangu.transform.localPosition;
+                this.HeXiangu.SetActive(false);
+            }
             this.LvDongbin.SetActive(true);
-            this.HeXiangu.SetActive(false);
 
             this.currentPlayer = playerName.LvDongbin;
         }
-        else 
+        else if (name == playerName.HeXiangu && !isHeDead)
         {
             this.playerScript.SetHealth(playerHP[playerName.HeXiangu]);
             this.playerScript.SetAvatar(playerName.HeXiangu);
             // update He Xiangu position
-            this.HeXiangu.transform.localPosition = this.LvDongbin.transform.localPosition;
-            this.LvDongbin.SetActive(false);
+            if (this.LvDongbin != null)
+            {
+                this.HeXiangu.transform.localPosition = this.LvDongbin.transform.localPosition;
+                this.LvDongbin.SetActive(false);
+            }
             this.HeXiangu.SetActive(true);
 
             this.currentPlayer = playerName.HeXiangu;
+        }
+    }
+
+    public bool getIsPlayerDead()
+    {
+        if (this.currentPlayer == playerName.LvDongbin)
+        {
+            return this.isLvDead;
+        }
+        else
+        {
+            return this.isHeDead;
         }
     }
 }

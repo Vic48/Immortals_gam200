@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
         //Due Damage
         foreach (Collider2D player in hitPlayer)
         {
-            if (player.name == gameControl.playerName.LvDongbin.ToString() || player.name == gameControl.playerName.LvDongbin.ToString())
+            if (player.name == gameControl.playerName.LvDongbin.ToString() || player.name == gameControl.playerName.HeXiangu.ToString())
             {
                 player.transform.parent.GetComponent<Player>().TakeDamage(attackDamage);
             }

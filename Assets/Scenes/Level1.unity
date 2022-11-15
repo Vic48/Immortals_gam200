@@ -3415,13 +3415,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 568925216}
   healthBarAvatar: {fileID: 1101039438}
+  LvAnim: {fileID: 204278166}
+  HeAnim: {fileID: 1458171250}
   LvDonbinIcon: {fileID: 21300000, guid: df332f9b16fde1a4b82f6fba10fedc3f, type: 3}
   HeXianguIcon: {fileID: 21300000, guid: a6366b65865d2f7419c2e229d2bb241d, type: 3}
+  LvDonbinObject: {fileID: 204278162}
+  HeXianguObject: {fileID: 1458171246}
   position: {x: 0, y: 0}
   maxHealth: 100
   currentHealth: 0
-  isDead: 0
-  deadBodyDestroyTime: 0
+  deadBodyDestroyTime: 3
 --- !u!1 &325242299
 GameObject:
   m_ObjectHideFlags: 0
@@ -9708,7 +9711,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1061614058}
   - component: {fileID: 1061614060}
-  - component: {fileID: 1061614059}
   m_Layer: 0
   m_Name: Arrow_actual
   m_TagString: Untagged
@@ -9730,32 +9732,6 @@ Transform:
   m_Father: {fileID: 1020178267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.02}
---- !u!61 &1061614059
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061614057}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.63411987, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.2, y: 7.2}
-    newSize: {x: 7.2, y: 7.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.2503226, y: 7.2}
-  m_EdgeRadius: 0
 --- !u!212 &1061614060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -70282,7 +70258,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08172321, y: 0.036583662}
+  m_Offset: {x: 0.08482313, y: 0.036583662}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -70293,7 +70269,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.755394, y: 2.9484954}
+  m_Size: {x: 1.7615938, y: 2.9484954}
   m_EdgeRadius: 0
 --- !u!212 &1458171253
 SpriteRenderer:
@@ -75071,6 +75047,8 @@ MonoBehaviour:
   LvDongbin: {fileID: 204278162}
   HeXiangu: {fileID: 1458171246}
   playerScript: {fileID: 318743921}
+  isHeDead: 0
+  isLvDead: 0
   defaultPlayer: 0
   currentPlayer: 0
 --- !u!4 &1974800478

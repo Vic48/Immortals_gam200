@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (LvDongbin.activeSelf)
+        if (gameControl.Instance.currentPlayer == gameControl.playerName.LvDongbin)
         {
             target = LvDongbin.transform;
         }
