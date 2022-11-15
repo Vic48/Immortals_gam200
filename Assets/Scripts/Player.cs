@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= 50;
+        currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
 
