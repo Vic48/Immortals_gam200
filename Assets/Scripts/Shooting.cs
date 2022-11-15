@@ -1,14 +1,13 @@
-using JetBrains.Annotations;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Serialization;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class Bow : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
+
     [SerializeField] private HeXiangu hXG;
+    public Animator anim;
+
     public GameObject arrow;
     public float launchForce;
     public Transform shotPoint;
@@ -25,7 +24,7 @@ public class Bow : MonoBehaviour
     private void Start()
     {
         points = new GameObject[numberOfPoints];
-        for(int i = 0; i < numberOfPoints; i++)
+        for (int i = 0; i < numberOfPoints; i++)
         {
             points[i] = Instantiate(point, shotPoint.position, Quaternion.identity);
         }
@@ -53,10 +52,11 @@ public class Bow : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            anim.SetTrigger("NormalAttack");
             shoot();
         }
 
-        for(int i = 0; i < numberOfPoints; i++)
+        for (int i = 0; i < numberOfPoints; i++)
         {
             points[i].transform.position = PointPosition(i * spaceBetweenPoints);
         }
@@ -64,7 +64,7 @@ public class Bow : MonoBehaviour
     void shoot()
     {
         //store new created arrow in an object
-        GameObject newArrow =Instantiate(arrow, shotPoint.position, shotPoint.rotation);
+        GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
 
         //fetch rb components 
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;

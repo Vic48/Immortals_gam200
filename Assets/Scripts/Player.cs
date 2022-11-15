@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     [SerializeField]
     public Image healthBarAvatar;
+    public Animator anim;
+
     // Icon is the small avatar beside HP bar
     [SerializeField]
     public Sprite LvDonbinIcon;
@@ -33,10 +36,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //everytime press space bar
-        if (Input.GetKeyDown("0"))
+        if (isDead)
         {
-            TakeDamage(20);
+            // Do not change position after die
+            this.gameObject.transform.position = deadPosition;
         }
     }
 
@@ -63,29 +66,29 @@ public class Player : MonoBehaviour
             healthBarAvatar.sprite = HeXianguIcon;
         }
     }
-    //void Die()
-    //{
-    //    this.isDead = true;
 
-    //    //die animation
-    //    anim.SetBool("IsDead", true);
+    void Die()
+    {
+        this.isDead = true;
 
-    //    //Disable the enemy collision
-    //    GetComponent<Collider2D>().enabled = false;
+        //die animation
+        anim.SetBool("IsDead", true);
 
-    //    // record dead position
-    //    this.deadPosition = this.gameObject.transform.position;
+        //Disable the enemy collision
+        GetComponent<Collider2D>().enabled = false;
 
+        // record dead position
+        this.deadPosition = this.gameObject.transform.position;
 
-    //    // Destry dead body
-    //    StartCoroutine(playerDieDestory());
-    //}
-    //IEnumerator playerDieDestory()
-    //{
-    //    yield return new WaitForSeconds(deadBodyDestroyTime);
-    //    // Destroy enemy dead body after 3s
-    //    this.gameObject.SetActive(false);
-    //    this.enabled = false;
-    //    Destroy(this);
-    //}
+        // Destry dead body
+        StartCoroutine(playerDieDestory());
+    }
+    IEnumerator playerDieDestory()
+    {
+        yield return new WaitForSeconds(deadBodyDestroyTime);
+        // Destroy enemy dead body after 3s
+        this.gameObject.SetActive(false);
+        this.enabled = false;
+        Destroy(this);
+    }
 }

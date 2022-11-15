@@ -2440,7 +2440,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackRange: 0.8
-  attackDamage: 20
+  attackDamage: 10
   attackRate: 2
 --- !u!1 &207516681
 GameObject:
@@ -9281,10 +9281,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020178266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ae6eade95b0d6428dade40124faadc, type: 3}
+  m_Script: {fileID: 11500000, guid: a4a4b85278a28994da917882f0b27b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hXG: {fileID: 1458171254}
+  anim: {fileID: 1458171250}
   arrow: {fileID: 5908261939433110228, guid: a8d9058530dbd7643959ed2457ae7631, type: 3}
   launchForce: 14
   shotPoint: {fileID: 11381853}
@@ -70358,7 +70359,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
-  LaunchForce: 0
   playerMovement: {fileID: 1458171249}
 --- !u!1 &1462625649
 GameObject:

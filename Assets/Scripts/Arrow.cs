@@ -8,6 +8,8 @@ public class Arrow : MonoBehaviour
     Rigidbody2D rb;
     bool hasHit;
 
+    public int attackDamage = 10;
+
     private void Start()
     {
         //get the rb that is attached to the arrow now

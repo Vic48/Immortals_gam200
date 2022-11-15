@@ -5,7 +5,6 @@ using UnityEngine;
 public class HeXiangu : MonoBehaviour
 {
     public Vector2 direction;
-    public float LaunchForce;
     //public GameObject Arrow;
     public PlayerMovement playerMovement;
 

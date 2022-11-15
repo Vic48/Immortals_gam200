@@ -9,6 +9,7 @@ public class LvDongbin : MonoBehaviour
     public Transform attackPoint;
     public LayerMask enemyLayers;
 
+    //attack related
     public float attackRange = 0.5f;
     public int attackDamage = 20;
     public float attackRate = 2f;
@@ -27,6 +28,8 @@ public class LvDongbin : MonoBehaviour
             }
         }
     }
+
+    //collecting coins
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Coins"))
