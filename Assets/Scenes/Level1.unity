@@ -3418,7 +3418,9 @@ MonoBehaviour:
   LvAnim: {fileID: 204278166}
   HeAnim: {fileID: 1458171250}
   LvDonbinIcon: {fileID: 21300000, guid: df332f9b16fde1a4b82f6fba10fedc3f, type: 3}
+  LvDonbinGrayIcon: {fileID: 21300000, guid: cb37c46295045c04aa8c313032171434, type: 3}
   HeXianguIcon: {fileID: 21300000, guid: a6366b65865d2f7419c2e229d2bb241d, type: 3}
+  HeXianguGrayIcon: {fileID: 21300000, guid: 6f30651b42594b84187d9471db26dfcc, type: 3}
   LvDonbinObject: {fileID: 204278162}
   HeXianguObject: {fileID: 1458171246}
   position: {x: 0, y: 0}

@@ -15,8 +15,10 @@ public class Player : MonoBehaviour
     // Icon is the small avatar beside HP bar
     [SerializeField]
     public Sprite LvDonbinIcon;
+    public Sprite LvDonbinGrayIcon;
     [SerializeField]
     public Sprite HeXianguIcon;
+    public Sprite HeXianguGrayIcon;
 
     public GameObject LvDonbinObject;
     public GameObject HeXianguObject;
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour
             LvDonbinObject.GetComponent<Rigidbody2D>().mass = 100000;
 
             // set Avatar gray when Lv Donbin die
-            // healthBarAvatar.sprite = LvDonbinGrayIcon;
+            healthBarAvatar.sprite = LvDonbinGrayIcon;
         }
         else
         {
@@ -90,7 +92,7 @@ public class Player : MonoBehaviour
             HeXianguObject.GetComponent<Rigidbody2D>().mass = 100000;
 
             // set Avatar gray when He Xiangu die
-            // healthBarAvatar.sprite = HeXianguGrayIcon;
+            healthBarAvatar.sprite = HeXianguGrayIcon;
         }
 
         // Destry dead body
