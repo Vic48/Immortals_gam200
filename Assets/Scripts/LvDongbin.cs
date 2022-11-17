@@ -20,7 +20,7 @@ public class LvDongbin : MonoBehaviour
         if (Time.time > nextAttackTime)
         {
             //normal attck
-            if (Input.GetKeyDown(KeyCode.Q))
+            if ((Input.GetKeyDown(KeyCode.Q)) && (gameControl.Instance.isLvDead == false))
             {
                 normalAttack();
                 //0.5 second cool down time

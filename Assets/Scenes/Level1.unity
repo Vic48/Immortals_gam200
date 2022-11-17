@@ -358,7 +358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11381852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97, y: -0.1, z: 0}
+  m_LocalPosition: {x: 1.39, y: -0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1020178267}
@@ -2263,7 +2263,7 @@ GameObject:
   - component: {fileID: 204278166}
   - component: {fileID: 204278165}
   - component: {fileID: 204278169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LvDongbin
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3378,7 +3378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318743920}
   - component: {fileID: 318743921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10031,7 +10031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071342509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.0522995, y: -0.39, z: 0}
+  m_LocalPosition: {x: -9.01, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 833444651}
@@ -70165,7 +70165,7 @@ GameObject:
   - component: {fileID: 1458171250}
   - component: {fileID: 1458171249}
   - component: {fileID: 1458171254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HeXiangu
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -75787,7 +75787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2019861695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

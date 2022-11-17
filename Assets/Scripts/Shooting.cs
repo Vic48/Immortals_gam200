@@ -50,7 +50,7 @@ public class Shooting : MonoBehaviour
             transform.right = Direction;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && (gameControl.Instance.isHeDead == false))
         {
             anim.SetTrigger("NormalAttack");
             shoot();

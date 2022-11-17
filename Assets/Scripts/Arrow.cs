@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static gameControl;
 
 public class Arrow : MonoBehaviour
 {
     Rigidbody2D rb;
     bool hasHit;
+    public LayerMask enemyLayers;
 
     public int attackDamage = 10;
 
@@ -27,8 +29,9 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D (Collider2D hitInfo)
     {
+        Debug.Log(hitInfo.name);
         //if the arrow hits something
         hasHit = true;
 
@@ -39,5 +42,12 @@ public class Arrow : MonoBehaviour
         rb.isKinematic = true;
 
         // need to add due damage code here 
+
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage(attackDamage);
+        }
+        Destroy(gameObject);
     }
 }
