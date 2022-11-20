@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpHight;
     [SerializeField] private LayerMask groundLayer;
+    public GameObject target;
+    public Transform targetTransform;
     private Rigidbody2D playerBody;
     private Animator anim;
     private BoxCollider2D boxCollider;
@@ -50,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
     private void run()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-
         // Flip player when moving left-right
         if (horizontalInput > 0.01f)
         {
@@ -81,6 +83,13 @@ public class PlayerMovement : MonoBehaviour
                 attackPosition.x = 0.9f;
                 gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
             }
+            if (gameObject.name == gameControl.playerName.HeXiangu.ToString())
+            {
+                // target pos
+                Vector3 originalPosition = target.transform.localPosition;
+                Vector3 newPosition = new Vector3(-0.77f, originalPosition.y, originalPosition.z);
+                target.transform.localPosition = newPosition;
+            }
         }
         if (dir == -1)
         {
@@ -91,6 +100,15 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 attackPosition = gameObject.transform.GetChild(0).localPosition;
                 attackPosition.x = -0.9f;
                 gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
+            }
+            if (gameObject.name == gameControl.playerName.HeXiangu.ToString())
+            {
+                Debug.Log("1");
+                // target pos
+                Vector3 originalPosition = target.transform.localPosition;
+                // flip target pos
+                Vector3 newPosition = new Vector3(0.77f, originalPosition.y, originalPosition.z);
+                target.transform.localPosition = newPosition;
             }
         }
         dir = direction;

@@ -54,7 +54,6 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         EnemyHB.SetHealth(currentHealth);
 
-        Debug.Log("HERE");
         //play hurt animation
         anim.SetTrigger("Hurt");
 

@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private HeXiangu hXG;
     public Animator anim;
 
+
     public GameObject arrow;
     public float launchForce;
     public Transform shotPoint;
