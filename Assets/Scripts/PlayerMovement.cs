@@ -103,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
             }
             if (gameObject.name == gameControl.playerName.HeXiangu.ToString())
             {
-                Debug.Log("1");
                 // target pos
                 Vector3 originalPosition = target.transform.localPosition;
                 // flip target pos
