@@ -13,6 +13,7 @@ public class gameControl : MonoBehaviour
     // dead related
     public bool isHeDead = false;
     public bool isLvDead = false;
+
     public enum playerName
     {
         LvDongbin,
@@ -23,6 +24,13 @@ public class gameControl : MonoBehaviour
 
     // hp for two player
     private Dictionary<playerName, int> playerHP;
+
+    // pause menu related
+    private bool pauseToggle = false;
+    public GameObject pauseMenu;
+    public GameObject gameOverScreen;
+    private CameraZoom camZoom;
+    public bool gameOver = false;
 
     private void Awake()
     {
@@ -60,6 +68,9 @@ public class gameControl : MonoBehaviour
             this.LvDongbin.SetActive(false);
             this.HeXiangu.SetActive(true);
         }
+
+        // find the camera zoom script
+        camZoom = GameObject.Find("Main Camera/Zoom").GetComponent<CameraZoom>();
     }
 
     // Update is called once per frame
@@ -83,6 +94,18 @@ public class gameControl : MonoBehaviour
                 this.swithPlayer(playerName.LvDongbin);
             }
         }
+        // on press esc, open pause menu
+        if (!camZoom.isZoomActive && Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (pauseToggle)
+            {
+                pauseMenu.GetComponent<pauseMenu>().hide();
+            }
+            else
+            {
+                pauseMenu.GetComponent<pauseMenu>().show();
+            }
+        }
 
         // check if HP <= 0
         if (this.playerScript.currentHealth <= 0) 
@@ -102,6 +125,8 @@ public class gameControl : MonoBehaviour
         if (isLvDead && isHeDead) 
         {
             // game over
+            this.gameOver = true;
+            gameOverScreen.SetActive(true);
         }
     }
 
@@ -147,5 +172,10 @@ public class gameControl : MonoBehaviour
         {
             return this.isHeDead;
         }
+    }
+
+    public void setPauseToggle(bool isPauseToggle) 
+    {
+        this.pauseToggle = isPauseToggle;
     }
 }

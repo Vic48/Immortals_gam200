@@ -22,21 +22,24 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (gameControl.Instance.currentPlayer == gameControl.playerName.LvDongbin)
+        if (!gameControl.Instance.gameOver) 
         {
-            target = LvDongbin.transform;
-        }
-        else 
-        {
-            target = HeXiangu.transform;
-        }
-        // if zooming camera, do not control camera here la. Only one can control at one time!
-        if (!camZoom.isZoomActive)
-        {
-            //Player position; 2d camera z pos stays -10
-            Vector3 newPos = new Vector3(target.position.x, target.position.y + yoffset, -10f);
-            //change current pos to target pos
-            transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+            if (gameControl.Instance.currentPlayer == gameControl.playerName.LvDongbin)
+            {
+                target = LvDongbin.transform;
+            }
+            else
+            {
+                target = HeXiangu.transform;
+            }
+            // if zooming camera, do not control camera here la. Only one can control at one time!
+            if (!camZoom.isZoomActive)
+            {
+                //Player position; 2d camera z pos stays -10
+                Vector3 newPos = new Vector3(target.position.x, target.position.y + yoffset, -10f);
+                //change current pos to target pos
+                transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+            }
         }
     }
 }

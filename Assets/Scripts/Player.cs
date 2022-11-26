@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     public float deadBodyDestroyTime;
 
+    public bool isDieInProgress = false;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -43,12 +45,22 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        //if
+        if (!this.isDieInProgress)
+        {
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
 
-        //play hurt animation
-        LvAnim.SetTrigger("Hurt");
-        HeAnim.SetTrigger("Hurt");
+            if (gameControl.Instance.currentPlayer == gameControl.playerName.HeXiangu)
+            {
+                Debug.Log(currentHealth);
+                Debug.Log(damage);
+            }
+
+            //play hurt animation
+            LvAnim.SetTrigger("Hurt");
+            HeAnim.SetTrigger("Hurt");
+        }
     }
 
     public void SetHealth(int health)
@@ -71,6 +83,7 @@ public class Player : MonoBehaviour
 
     public void Die(gameControl.playerName playerName)
     {
+        isDieInProgress = true;
         //die animation
         if (playerName == gameControl.playerName.LvDongbin)
         {
@@ -116,6 +129,7 @@ public class Player : MonoBehaviour
             gameControl.Instance.swithPlayer(gameControl.playerName.LvDongbin);
             Destroy(HeXianguObject, .5f);
         }
+        isDieInProgress = false;
         StopCoroutine(playerDieDestory(playerName));
     }
 }
