@@ -22,6 +22,10 @@ public class Shooting : MonoBehaviour
 
     public Vector2 position;
 
+    // shoot arrow rate
+    private float nextAttackTime = 0f;
+    public float shootArrowAnimationTime;
+
     private void Start()
     {
         points = new GameObject[numberOfPoints];
@@ -47,14 +51,19 @@ public class Shooting : MonoBehaviour
         //Make right pos as the direction
         if ((Direction.x >= 0 && isFlip == false) || (Direction.x <= 0 && isFlip == true))
         {
-            //Debug.Log(Direction.x);
             transform.right = Direction;
         }
+        else {
+            transform.right = -Direction;
+        }
 
-        if (Input.GetMouseButtonDown(0) && (gameControl.Instance.isHeDead == false))
+        if (Input.GetMouseButtonDown(0) && (gameControl.Instance.isHeDead == false) && !gameControl.Instance.getPauseToggle())
         {
             anim.SetTrigger("NormalAttack");
-            shoot();
+            if (Time.time > nextAttackTime) {
+                shoot();
+                nextAttackTime = Time.time + shootArrowAnimationTime;
+            }
         }
 
         for (int i = 0; i < numberOfPoints; i++)

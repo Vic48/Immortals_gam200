@@ -108,6 +108,7 @@ public class gameControl : MonoBehaviour
         }
 
         // check if HP <= 0
+        Debug.Log(this.playerScript.currentHealth);
         if (this.playerScript.currentHealth <= 0) 
         {
             if (this.currentPlayer == playerName.LvDongbin)
@@ -118,11 +119,22 @@ public class gameControl : MonoBehaviour
             {
                 this.isHeDead = true;
             }
-            this.playerScript.Die(this.currentPlayer);
+            if (!this.gameOver)
+            {
+                this.playerScript.Die(this.currentPlayer);
+            }
         }
 
         // both dead
-        if (isLvDead && isHeDead) 
+        if (isLvDead && isHeDead)
+        {
+            // game over
+            this.gameOver = true;
+            gameOverScreen.SetActive(true);
+        }
+
+        // drop out of scene
+        if ((!isLvDead && this.LvDongbin.transform.position.y < -75) || (!isHeDead && this.HeXiangu.transform.position.y < -75))
         {
             // game over
             this.gameOver = true;
@@ -177,5 +189,10 @@ public class gameControl : MonoBehaviour
     public void setPauseToggle(bool isPauseToggle) 
     {
         this.pauseToggle = isPauseToggle;
+    }
+
+    public bool getPauseToggle()
+    {
+        return this.pauseToggle;
     }
 }
