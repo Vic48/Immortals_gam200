@@ -15,6 +15,8 @@ public class PlatAttach : MonoBehaviour
     //starting position of the Platform
     public Vector3 startPoint;
     public Vector3 endPoint;
+    public float lvDongbinHeight;
+    public float heXianguHeight;
 
     //index of the array
     private int i;
@@ -44,12 +46,12 @@ public class PlatAttach : MonoBehaviour
             );
             LvDongbin.transform.position = new Vector3(
                 LvDongbin.transform.position.x,
-                platform.transform.position.y + 1.7f,
+                platform.transform.position.y + lvDongbinHeight,
                 0
             );
             HeXiangu.transform.position = new Vector3(
                 HeXiangu.transform.position.x,
-                platform.transform.position.y + 1.7f,
+                platform.transform.position.y + heXianguHeight,
                 0
             );
         }
