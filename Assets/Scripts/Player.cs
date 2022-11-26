@@ -45,6 +45,10 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+
+        //play hurt animation
+        LvAnim.SetTrigger("Hurt");
+        HeAnim.SetTrigger("Hurt");
     }
 
     public void SetHealth(int health)
