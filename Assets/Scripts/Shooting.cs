@@ -13,26 +13,14 @@ public class Shooting : MonoBehaviour
     public float launchForce;
     public Transform shotPoint;
 
-    public GameObject point;
-    GameObject[] points;
-    public int numberOfPoints;
-    public float spaceBetweenPoints;
-    Vector2 direction;
     public bool isFlip;
 
-    public Vector2 position;
-
     // shoot arrow rate
-    private float nextAttackTime = 0f;
+    private float nextAttackTime;
     public float shootArrowAnimationTime;
 
     private void Start()
     {
-        points = new GameObject[numberOfPoints];
-        for (int i = 0; i < numberOfPoints; i++)
-        {
-            points[i] = Instantiate(point, shotPoint.position, Quaternion.identity);
-        }
     }
     private void Update()
     {
@@ -59,31 +47,29 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && (gameControl.Instance.isHeDead == false) && !gameControl.Instance.getPauseToggle())
         {
-            anim.SetTrigger("NormalAttack");
             if (Time.time > nextAttackTime) {
                 shoot();
                 nextAttackTime = Time.time + shootArrowAnimationTime;
             }
         }
-
-        for (int i = 0; i < numberOfPoints; i++)
-        {
-            points[i].transform.position = PointPosition(i * spaceBetweenPoints);
-        }
     }
     void shoot()
     {
+        anim.SetTrigger("NormalAttack");
+        StartCoroutine(shootArrow());
+    }
+
+    IEnumerator shootArrow()
+    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(0.4f);
+
         //store new created arrow in an object
         GameObject newArrow = Instantiate(arrow, shotPoint.position, shotPoint.rotation);
 
         //fetch rb components 
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
-    }
 
-    Vector2 PointPosition(float t)
-    {
-        Vector2 position = (Vector2)shotPoint.position + (direction.normalized * launchForce * t) + 0.5f * Physics2D.gravity * (t * t);
-        return position;
+        StopCoroutine(shootArrow());
     }
-
 }

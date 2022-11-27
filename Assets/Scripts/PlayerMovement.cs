@@ -52,15 +52,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void run()
     {
+        int dir = 0;
         float horizontalInput = Input.GetAxis("Horizontal");
         // Flip player when moving left-right
         if (horizontalInput > 0.01f)
         {
             flipPlayer(1);
+            dir = 1;
         }
         else if (horizontalInput < -0.01f)
         {
             flipPlayer(-1);
+            dir = -1;
         }
 
         playerBody.velocity = new Vector2((horizontalInput) * runSpeed, playerBody.velocity.y);
@@ -68,6 +71,26 @@ public class PlayerMovement : MonoBehaviour
         // If has horizontal input, Run = true else false
         // If in the air do play play run animation!
         anim.SetBool("Run", horizontalInput != 0 && isGrounded());
+        // if horizontal input != 0 means the charactor is running
+        // during running, the arrow should lean forward to fit the animation
+        if (gameControl.Instance.currentPlayer == gameControl.playerName.HeXiangu) 
+        {
+            if (gameObject.name == gameControl.playerName.HeXiangu.ToString() && horizontalInput != 0)
+            {
+                // target pos
+                Vector3 originalPosition = new Vector3(0f, 1.4f, 0f);
+                Vector3 newPosition = new Vector3(
+                    originalPosition.x + dir * 0.4f,
+                    originalPosition.y,
+                    originalPosition.z
+                );
+                target.transform.localPosition = newPosition;
+            }
+            else
+            {
+                target.transform.localPosition = new Vector3(0f, 1.5f, 0f);
+            }
+        }
     }
 
     // flip player
@@ -83,13 +106,13 @@ public class PlayerMovement : MonoBehaviour
                 attackPosition.x = 0.9f;
                 gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
             }
-            if (gameObject.name == gameControl.playerName.HeXiangu.ToString())
+/*            if (gameObject.name == gameControl.playerName.HeXiangu.ToString())
             {
                 // target pos
                 Vector3 originalPosition = target.transform.localPosition;
                 Vector3 newPosition = new Vector3(-0.77f, originalPosition.y, originalPosition.z);
                 target.transform.localPosition = newPosition;
-            }
+            }*/
         }
         if (dir == -1)
         {
@@ -101,14 +124,14 @@ public class PlayerMovement : MonoBehaviour
                 attackPosition.x = -0.9f;
                 gameObject.transform.GetChild(0).transform.localPosition = attackPosition;
             }
-            if (gameObject.name == gameControl.playerName.HeXiangu.ToString())
+/*            if (gameObject.name == gameControl.playerName.HeXiangu.ToString())
             {
                 // target pos
                 Vector3 originalPosition = target.transform.localPosition;
                 // flip target pos
                 Vector3 newPosition = new Vector3(0.77f, originalPosition.y, originalPosition.z);
                 target.transform.localPosition = newPosition;
-            }
+            }*/
         }
         dir = direction;
     }

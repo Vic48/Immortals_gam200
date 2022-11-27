@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
         //play hurt animation
         if (gameControl.Instance.currentPlayer == gameControl.playerName.LvDongbin)
         {
+            Debug.Log("here");
             LvAnim.SetTrigger("Hurt");
         }
         if (gameControl.Instance.currentPlayer == gameControl.playerName.HeXiangu)
