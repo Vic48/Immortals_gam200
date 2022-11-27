@@ -37,11 +37,14 @@ public class FallingSpikes : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player" && other.gameObject.name == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            GetComponent<Player>().TakeDamage(spikeDamage);
+            other.gameObject.transform.parent.GetComponent<Player>().TakeDamage(spikeDamage);
+            // GetComponent<Player>().TakeDamage(spikeDamage);
 
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            gameObject.SetActive(false);
+
         }
         else
         {

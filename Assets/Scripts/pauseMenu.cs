@@ -10,8 +10,8 @@ public class pauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button mainMenuBtn = gameObject.transform.Find("MainMenuBtn").gameObject.GetComponent<Button>();
-        mainMenuBtn.onClick.AddListener(mainMenuOnclick);
+        // Button mainMenuBtn = gameObject.transform.Find("MainMenuBtn").gameObject.GetComponent<Button>();
+        // mainMenuBtn.onClick.AddListener(mainMenuOnclick);
 
         Button settingBtn = gameObject.transform.Find("SettingsBtn").gameObject.GetComponent<Button>();
         settingBtn.onClick.AddListener(settingBtnOnclick);
@@ -28,10 +28,10 @@ public class pauseMenu : MonoBehaviour
     {
     }
 
-    void mainMenuOnclick() 
+    /* void mainMenuOnclick() 
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-    }
+    }*/
 
     void settingBtnOnclick()
     {

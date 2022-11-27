@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isPlayerDead = gameControl.Instance.getIsPlayerDead();
         // caution! camera is zooming! charactor do not move!
-        if (!camZoom.isZoomActive && !isPlayerDead)
+        if (!camZoom.isZoomActive && !isPlayerDead && gameObject.activeSelf)
         {
             // run
             run();
@@ -158,10 +158,9 @@ public class PlayerMovement : MonoBehaviour
             boxCollider.bounds.size,
             0,
             Vector2.down,
-            0.1f,
+            0.4f,
             groundLayer
         );
-        // Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
     }
 

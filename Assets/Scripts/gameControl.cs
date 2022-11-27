@@ -108,7 +108,6 @@ public class gameControl : MonoBehaviour
         }
 
         // check if HP <= 0
-        Debug.Log(this.playerScript.currentHealth);
         if (this.playerScript.currentHealth <= 0) 
         {
             if (this.currentPlayer == playerName.LvDongbin)
