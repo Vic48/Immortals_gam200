@@ -32,6 +32,9 @@ public class gameControl : MonoBehaviour
     private CameraZoom camZoom;
     public bool gameOver = false;
 
+    // move plat related
+    public bool isPlayerOnPlat = false;
+
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.

@@ -57,19 +57,4 @@ public class PlatAttach : MonoBehaviour
         }
         
     }
-/*    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // check if the colliding obj is player
-        if (other.gameObject == LvDongbin || other.gameObject == HeXiangu)
-        {
-            Debug.Log("here");
-            Vector3 currentPosition = platform.transform.localPosition;
-            // move parent
-            platform.transform.localPosition = Vector3.MoveTowards(
-                currentPosition,
-                endPoint,
-                speed * Time.deltaTime
-            );
-        }
-    }*/
 }

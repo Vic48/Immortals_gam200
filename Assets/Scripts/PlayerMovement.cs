@@ -140,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
+            gameControl.Instance.isPlayerOnPlat = false;
             playerBody.velocity = new Vector2(playerBody.velocity.x, jumpHight);
             anim.SetBool("Jump", true);
             // jump la, dont run!
