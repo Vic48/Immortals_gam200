@@ -114,11 +114,21 @@ public class Player : MonoBehaviour
         // Destroy enemy dead body after 3s
         if (playerName == gameControl.playerName.LvDongbin)
         {
+            if (!!LvDonbinObject)
+            {
+                LvDonbinObject.SetActive(false);
+            }
+            yield return new WaitForSeconds(1);
             gameControl.Instance.swithPlayer(gameControl.playerName.HeXiangu);
             Destroy(LvDonbinObject, .5f);
         }
         else
         {
+            if (!!HeXianguObject)
+            {
+                HeXianguObject.SetActive(false);
+            }
+            yield return new WaitForSeconds(1);
             gameControl.Instance.swithPlayer(gameControl.playerName.LvDongbin);
             Destroy(HeXianguObject, .5f);
         }
