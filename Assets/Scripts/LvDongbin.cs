@@ -42,12 +42,15 @@ public class LvDongbin : MonoBehaviour
     {
         //play an attack animation
         anim.SetTrigger("NormalAttack");
+        //play an attack sound
+        FindObjectOfType<AudioManager>().Play("LvbAttack");
         //Detect enemy in the range attack 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
             attackPoint.position,
             attackRange,
             enemyLayers
         );
+
         //Due Damage
         foreach (Collider2D enemy in hitEnemies)
         {

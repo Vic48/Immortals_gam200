@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
 {
@@ -31,7 +30,7 @@ public class pauseMenu : MonoBehaviour
 
     void mainMenuOnclick() 
     {
-        SceneManager.LoadScene("Menu");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 
     void settingBtnOnclick()
